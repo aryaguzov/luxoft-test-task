@@ -25,7 +25,7 @@ public class DriverFactory {
         WebDriverManager.chromedriver().setup();
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
 
         return driver;

@@ -49,7 +49,7 @@ public class RoutePO extends BasePO {
 
     public void selectBicycleOSRM() {
         Select transportOptions = new Select(transportDropdownMenu);
-        transportOptions.selectByIndex(BICYCLE_OSRM_ID);
+        transportOptions.selectByIndex(BICYCLE_OSRM_IDX);
     }
 
     public void clickOnGoButton() {
@@ -58,11 +58,7 @@ public class RoutePO extends BasePO {
 
     public void verifyDistance() {
         waitForElementIsVisibleAndClick(distance);
-        boolean result = isContained(distance, DISTANCE_BETWEEN_ROUTES);
+        boolean result = checkWhetherWebElementContainsText(distance, DISTANCE_BETWEEN_ROUTES);
         Assert.assertTrue(result);
-    }
-
-    private boolean isContained(WebElement element, String text) {
-        return element.getText().contains(text);
     }
 }
