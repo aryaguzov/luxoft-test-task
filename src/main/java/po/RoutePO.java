@@ -54,6 +54,7 @@ public class RoutePO extends BasePO {
 
     public void clickOnGoButton() {
         waitForElementIsVisible(goButton);
+        goButton.click();
     }
 
     public void verifyDistance() {
