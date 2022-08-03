@@ -29,8 +29,8 @@ public class BasePO {
         getWebDriverWait().until(ExpectedConditions.elementToBeClickable(element)).sendKeys(textToType);
     }
 
-    public void waitForElementIsVisibleAndClick(WebElement element) {
-        getWebDriverWait().until(ExpectedConditions.visibilityOf(element)).click();
+    public void waitForElementIsVisible(WebElement element) {
+        getWebDriverWait().until(ExpectedConditions.visibilityOf(element));
     }
 
     private WebDriverWait getWebDriverWait() {

@@ -53,11 +53,11 @@ public class RoutePO extends BasePO {
     }
 
     public void clickOnGoButton() {
-        waitForElementIsVisibleAndClick(goButton);
+        waitForElementIsVisible(goButton);
     }
 
     public void verifyDistance() {
-        waitForElementIsVisibleAndClick(distance);
+        waitForElementIsVisible(distance);
         boolean result = checkWhetherWebElementContainsText(distance, DISTANCE_BETWEEN_ROUTES);
         Assert.assertTrue(result);
     }
